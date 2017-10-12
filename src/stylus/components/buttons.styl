@@ -1,0 +1,42 @@
+.button
+  display inline-block
+  width auto
+  height auto
+  color #fff
+  background $color-primary
+  padding .7em 1.6em
+  text-align center
+  font-size 1.8rem
+  font-weight normal
+  text-decoration none
+  text-transform uppercase
+  transition all .2s ease
+  border-radius 10em
+
+  &:hover
+    color #fff
+    background $color-primary - 10%
+
+close()
+  position absolute
+  top 3em
+  left 2em
+  z-index 20
+  width 30px
+  height @width
+  cursor pointer
+
+  &:before,
+  &:after
+    content ''
+    display block
+    width 100%
+    height 1px
+    position absolute
+    background #fff
+
+  &:before
+    transform rotate(45deg)
+
+  &:after
+    transform rotate(-45deg)

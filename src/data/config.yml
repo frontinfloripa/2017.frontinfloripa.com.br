@@ -1,0 +1,6 @@
+event:
+  name: Front in Floripa
+  description: Maior evento front-end de Santa Catarina
+
+tickets:
+  url: "http://simpla.com.br"

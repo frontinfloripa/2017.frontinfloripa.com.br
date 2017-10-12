@@ -1,0 +1,22 @@
+{
+  "name": "spin",
+  "description": "Spin - Essential Business",
+  "version": "0.1.0",
+  "author": {
+    "name": "Diogo Moretti",
+    "url": "diogo.pearljam@gmail.com"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-connect": "^5.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-stylus": "^2.6.0",
+    "kouto-swiss": "^1.1.0",
+    "nib": "^1.1.2",
+    "rupture": "^0.6.2",
+    "stylus": "^0.54.5"
+  },
+  "dependencies": {
+    "gulp-plumber": "~0.5.6"
+  }
+}

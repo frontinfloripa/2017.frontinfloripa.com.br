@@ -1,0 +1,125 @@
+.header
+  height 100%
+  position relative
+  overflow hidden
+  border-top 5px solid $color-primary
+
+  &-wrapper
+    position relative
+    display flex
+    justify-content center
+    align-items center
+    z-index 10
+    height 100vh
+    background url($path-img + 'dots.png') rgba($color-default, .8)
+
+    &:before,
+    &:after
+      content ''
+      position absolute
+      width 100%
+      height 400px
+
+    &:before
+      background #3decc2
+      right 50%
+      transform rotate(10deg)
+      bottom -200px
+
+      +below('phone')
+        bottom @bottom - 100
+
+    &:after
+      background $color-primary
+      left 51%
+      transform rotate(-10deg)
+      bottom -195px
+
+      +below('phone')
+        bottom @bottom - 95
+
+  &-content
+    width 100%
+    margin-top -100px
+    text-align center
+    padding 0 2em
+
+    &:before
+      content ''
+      width 500px
+      height 1000px
+      border-left 1px solid $color-primary
+      transform rotate(-45deg)
+      position absolute
+      top -500px
+      right -300px
+
+      +below('phone')
+        display none
+
+    &:after
+      content ''
+      width 100px
+      height 400px
+      border-right 1px solid $color-primary
+      transform rotate(45deg)
+      position absolute
+      top -200px
+      left 0
+
+      +below('phone')
+        display none
+
+  &-info
+    color #fff
+    font-size 3rem
+    margin 0
+    padding 1em 0
+
+    span
+      color $color-primary
+
+    +below('phone')
+      font-size 2.5rem
+
+  &-support
+    padding-top 2em
+
+    &__link
+      display inline-block
+      margin 0 .5em
+      color #fff
+      font-size 1.4rem
+      font-weight normal
+      text-decoration none
+      padding-bottom 3px
+      border-bottom 1px solid transparent
+      transition border .3s ease
+
+      &:hover
+        border-bottom 1px solid $color-primary
+
+    &__divisor
+      color #000
+      font-weight bold
+
+  &-video
+    position absolute
+    top 0
+    left 0
+    min-width 100%
+    min-height 100%
+    width auto
+    height auto
+
+  &-logo
+    margin 0 auto
+    padding 0
+    width 300px
+    height @width
+    text-indent -9999em
+    bg('svg', 'logo.svg')
+
+    +below('phone')
+      width 240px
+      height @width

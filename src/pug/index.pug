@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no')
+
+    title #{config.event.name} 2017
+
+    meta(property='og:locale' content='pt_BR')
+    meta(property='og:url' content='http://www.frontinfloripa.com.br')
+    meta(property='og:type' content='website')
+    meta(property='og:title' content='Front in Floripa 2017')
+    meta(property='og:site_name' content='Front in Floripa')
+    meta(property='og:description' content='Maior evento front-end de Santa Catarina')
+    meta(property='og:image' content='http://www.frontinfloripa.com.br/assets/images/social.png')
+
+    meta(name='twitter:card' content='summary_large_image')
+    meta(name='twitter:title' content='Front in Floripa 2017')
+    meta(name='twitter:description' content='Maior evento front-end de Santa Catarina')
+    meta(name='twitter:site' content='@frontinfloripa')
+    meta(name='twitter:image' content='http://www.frontinfloripa.com.br/assets/images/social.png')
+
+    link(href='//fonts.googleapis.com/css?family=Work+Sans:300,400,700,900' rel='stylesheet')
+    link(rel='stylesheet' href='assets/css/main.css')
+  body
+    header.header
+      .header-wrapper
+        .header-content
+          h1.header-logo #{config.event.name}
+          h2.header-info 02/Dezembro #[span &bull;] 9h #[span &bull;] Hotel Maria do Mar
+          a.button(href='#' target='_blank') Comprar Ingresso
+          div.header-support
+            a.header-support__link(href='https://goo.gl/QqtsRp' target='_blank') Quero patrocinar
+            span.header-support__divisor |
+            a.header-support__link(href='https://goo.gl/CYRjnX' target='_blank') Quero palestrar
+      video.header-video(loop autoplay)
+        source(src='assets/video/frontinfloripa2017.webm' type='video/webm')
+        source(src='assets/video/fif.mp4' type='video/mp4')
