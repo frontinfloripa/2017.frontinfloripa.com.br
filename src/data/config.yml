@@ -1,6 +1,7 @@
 event:
-  name: Front in Floripa
+  name: Front in Floripa 2017
   description: Maior evento front-end de Santa Catarina
+  url: "http://www.frontinfloripa.com.br"
 
 tickets:
-  url: "http://simpla.com.br"
+  url: "https://www.sympla.com.br/front-in-floripa-2017__200654"

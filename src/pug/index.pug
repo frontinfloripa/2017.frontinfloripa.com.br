@@ -2,22 +2,25 @@ doctype html
 html
   head
     meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no')
 
-    title #{config.event.name} 2017
+    title #{config.event.name} 2017 &bull; #{config.event.description}
+
+    meta(name='description' content=`${config.event.name} - ${config.event.description}`)
+    meta(name='keywords' content='desenvolvedor frontend, desenvolvedor front-end, front-end em florianópolis, eventos de front-end em florianópolis, frontinfloripa, frontinfloripa 2017, eventos de desenvolvimento, desenvolvimento, front-end, html, html5, css3, css, javascript, js')
 
     meta(property='og:locale' content='pt_BR')
-    meta(property='og:url' content='http://www.frontinfloripa.com.br')
+    meta(property='og:url' content=`${config.event.url}`)
     meta(property='og:type' content='website')
-    meta(property='og:title' content='Front in Floripa 2017')
+    meta(property='og:title' content=`${config.event.name}`)
     meta(property='og:site_name' content='Front in Floripa')
-    meta(property='og:description' content='Maior evento front-end de Santa Catarina')
+    meta(property='og:description' content=`${config.event.description}`)
     meta(property='og:image' content='http://www.frontinfloripa.com.br/assets/images/social.png')
 
     meta(name='twitter:card' content='summary_large_image')
-    meta(name='twitter:title' content='Front in Floripa 2017')
-    meta(name='twitter:description' content='Maior evento front-end de Santa Catarina')
+    meta(name='twitter:title' content=`${config.event.name}`)
+    meta(name='twitter:description' content=`${config.event.description}`)
     meta(name='twitter:site' content='@frontinfloripa')
     meta(name='twitter:image' content='http://www.frontinfloripa.com.br/assets/images/social.png')
 
@@ -28,8 +31,8 @@ html
       .header-wrapper
         .header-content
           h1.header-logo #{config.event.name}
-          h2.header-info 02/Dezembro #[span &bull;] 9h #[span &bull;] Hotel Maria do Mar
-          a.button(href='#' target='_blank') Comprar Ingresso
+          h2.header-info 02/Dezembro #[span &bull;] 9h #[span &bull;] #[a(href='https://goo.gl/maps/ty539BmfZM82' target='_blank') Hotel Maria do Mar]
+          a.button(href=`${config.tickets.url}` target='_blank') Comprar Ingresso
           div.header-support
             a.header-support__link(href='https://goo.gl/QqtsRp' target='_blank') Quero patrocinar
             span.header-support__divisor |
@@ -37,3 +40,5 @@ html
       video.header-video(loop autoplay)
         source(src='assets/video/frontinfloripa2017.webm' type='video/webm')
         source(src='assets/video/fif.mp4' type='video/mp4')
+
+    section.features

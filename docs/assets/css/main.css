@@ -250,6 +250,9 @@ body {
   position: relative;
   overflow: hidden;
   border-top: 5px solid #31ddb4;
+  background-image: url("../img/bg-header.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .header-wrapper {
   position: relative;
@@ -347,6 +350,13 @@ body {
   margin: 0;
   padding: 1em 0;
 }
+.header-info a {
+  color: #fff;
+  text-decoration: none;
+}
+.header-info a:hover {
+  color: #31ddb4;
+}
 .header-info span {
   color: #31ddb4;
 }
@@ -385,6 +395,11 @@ body {
   min-height: 100%;
   width: auto;
   height: auto;
+}
+@media only screen and (max-width: 580px) {
+  .header-video {
+    display: none;
+  }
 }
 .header-logo {
   margin: 0 auto;

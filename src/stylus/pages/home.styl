@@ -3,6 +3,7 @@
   position relative
   overflow hidden
   border-top 5px solid $color-primary
+  bg('img', 'bg-header.jpg')
 
   &-wrapper
     position relative
@@ -76,6 +77,13 @@
     margin 0
     padding 1em 0
 
+    a
+      color #fff
+      text-decoration none
+
+      &:hover
+        color $color-primary
+
     span
       color $color-primary
 
@@ -111,6 +119,9 @@
     min-height 100%
     width auto
     height auto
+
+    +below('phone')
+      display none
 
   &-logo
     margin 0 auto
