@@ -24,7 +24,7 @@ html
     meta(name='twitter:site' content='@frontinfloripa')
     meta(name='twitter:image' content='http://www.frontinfloripa.com.br/assets/img/social.png')
 
-    link(href='//fonts.googleapis.com/css?family=Work+Sans:300,400,700,900' rel='stylesheet')
+    link(href='//fonts.googleapis.com/css?family=Work+Sans:300,400,600,700' rel='stylesheet')
     link(rel='stylesheet' href='assets/css/main.css')
   body
     header.header
@@ -40,3 +40,90 @@ html
       video.header-video(loop autoplay)
         source(src='assets/video/frontinfloripa2017.webm' type='video/webm')
         source(src='assets/video/frontinfloripa2017.mp4' type='video/mp4')
+
+    section.features
+      .features-wrapper
+        .features-column-title
+          h2.features-title Por que ir no evento?
+          h2.features-description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quam itaque dolores quaerat consequuntur perspiciatis voluptate ad molestiae officia fugiat.
+        .features-column-content
+          ul.features-list
+            li.features-list-item
+              h3.features-list-item__title Interação
+              h3.features-list-item__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, consequatur, sit? Expedita, sit impedit est totam perspiciatis reiciendis officiis optio similique magni doloribus quia ea, saepe repellendus vel aliquid possimus.
+            li.features-list-item
+              h3.features-list-item__title Conhecimento
+              h3.features-list-item__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, consequatur, sit? Expedita, sit impedit est totam perspiciatis reiciendis officiis optio similique magni doloribus quia ea, saepe repellendus vel aliquid possimus.
+            li.features-list-item
+              h3.features-list-item__title Diversão
+              h3.features-list-item__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, consequatur, sit? Expedita, sit impedit est totam perspiciatis reiciendis officiis optio similique magni doloribus quia ea, saepe repellendus vel aliquid possimus.
+
+    section.speakers
+      .speakers-wrapper
+        .speakers-title
+          span Palestrantes & Talks
+        ul.speakers-list
+          each speaker in speakers
+            li(class=`speakers-list-item speakers-list-item__status-${speaker.status}`)
+              .speakers-list-item-photo
+                img.speakers-list-item__avatar(src=`assets/img/speakers/${speaker.avatar}`)
+              .speakers-list-item-content
+                h3.speakers-list-item__title= speaker.name
+                span.speakers-list-item__company= speaker.company
+                .speakers-list-item__social
+                  a.speakers-list-item__social-link.github(href=`https://github.com/${speaker.github}` target='_blank') Github
+                  a.speakers-list-item__social-link.twitter(href=`https://twitter.com/${speaker.twitter}` target='_blank') Twitter
+                p.speakers-list-item__talk= speaker.talk
+
+    section.location
+      .location-wrapper
+        .location-column.content
+          .location-content
+            .location-content-address
+              h3.location-title Hotel Maria do Mar
+              p.location-description  Rodovia João Paulo, 2285 #[br] Bairro João Paulo #[br] Florianópolis - SC - Brasil
+              a.button(href='https://goo.gl/maps/ty539BmfZM82' target='_blank') Como chegar
+            .location-content-discount
+              p.location-content-discount__text #[strong.up Tá afim de ficar no hotel?] Nós fizemos uma parceria com o hotel e conseguimos um #[strong DESCONTO \o/] para vocês. Lembramos que a tarifa do site é variável e os valores mudam de acordo com a demanda. O Front in Floripa não garante quartos disponíveis. Além disso, a reserva é toda de responsabilidade do hóspede junto ao hotel. Coloque o cupom no site e garanta seu quarto de frente para o mar ;)
+              span.location-content-discount__code FINF2636
+              a.button(href='http://mariadomar.com.br' target='_blank') Reservar
+
+        .location-column.photo
+
+    section.tickets
+      .tickets-wrapper
+        h2.tickets-title Ingresso
+        p.tickets-description 1º Lote – R$ 80
+        p.tickets-note Para grupos e excursões, envie um e-mail para #[span contato@frontinfloripa.com.br]
+        a.button(href=`${config.tickets.url}` target='_blank') Comprar Ingresso
+
+    section.support
+      .support-wrapper
+        h2.support-title #[span Patrocínio]
+          ul.support-list.patro
+            each sponsor in sponsors
+              li.support-item
+                a.support-link(href=`${sponsor.website}` target='_blank')
+                  img(src=`assets/img/sponsors/${sponsor.logo}`)
+
+        h2.support-title #[span Apoio]
+          ul.support-list.apoio
+            each item in support
+              li.support-item
+                a.support-link(href=`${item.website}` target='_blank')
+                  img(src=`assets/img/support/${item.logo}`)
+
+    footer.footer
+      .footer-wrapper
+        .footer-column.coc
+          a.footer-link(href='https://braziljs.org/coc' target='_blank') Código de Conduta
+        .footer-column.email
+          span.footer-email contato@frontinfloripa.com.br
+        .footer-column.social
+          ul.footer-social
+            li.footer-social-item
+              a.footer-social-link.twitter(href='https://twitter.com/frontinfloripa' target='_blank') Twitter
+            li.footer-social-item
+              a.footer-social-link.facebook(href='https://facebook.com/frontinfloripa' target='_blank') Facebook
+            li.footer-social-item
+              a.footer-social-link.github(href='https://github.com/frontinfloripa' target='_blank') Github

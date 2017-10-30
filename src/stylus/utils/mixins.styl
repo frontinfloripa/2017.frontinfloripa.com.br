@@ -14,12 +14,6 @@ wrapper()
   padding 0 2em
   margin 0 auto
 
-  +below('desktop-big')
-    padding 0 6em
-
-  +below('tablet')
-    padding 0 4em
-
 text-rotate()
   transform skew(-4deg) rotate(-4deg)
 
@@ -29,3 +23,16 @@ text-form()
   outline 0
   padding .4em
   border 0
+
+list-reset()
+  padding 0
+  margin 0
+  list-style none
+
+text-gradient()
+  display inline-block
+  background-clip text
+  -webkit-background-clip text
+  background-size cover
+  text-fill-color transparent
+  -webkit-text-fill-color transparent

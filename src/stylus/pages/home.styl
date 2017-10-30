@@ -22,7 +22,7 @@
       height 400px
 
     &:before
-      background #3decc2
+      background $color-primary-alt
       right 50%
       transform rotate(10deg)
       bottom -200px
@@ -134,3 +134,510 @@
     +below('phone')
       width 240px
       height @width
+
+.features
+  position relative
+  padding 15em 0 30em
+  background #fff
+  overflow hidden
+
+  &:before
+    content ''
+    width 100px
+    height 400px
+    border-right 1px solid $color-primary
+    transform rotate(-45deg)
+    position absolute
+    top -100px
+    left -100px
+
+    +below('phone')
+      display none
+
+  &:after
+    content ''
+    width 100%
+    height 350px
+    position absolute
+    bottom 0
+    left 0
+    bg('img', 'florianopolis-skyline.png')
+    background-position left bottom
+    z-index 1
+
+  &-wrapper
+    wrapper()
+    display flex
+    z-index 20
+    position relative
+
+  &-column-title
+    flex-basis 30%
+
+  &-column-content
+    flex 1
+
+  &-title
+    color $color-text
+    font-weight bold
+    font-size 7em
+    margin 0
+
+  &-description
+    color #777
+    font-weight normal
+    font-size 1.6em
+    margin 2em 0
+    line-height 1.6
+
+  &-list
+    list-reset()
+    padding-top 1em
+    counter-reset section
+
+    &-item
+      padding-left 25em
+      position relative
+      margin-bottom 6em
+
+      &:before
+        counter-increment section
+        content counter(section)
+        font-size 13em
+        position absolute
+        left 1em
+        top -10px
+        line-height 1
+        margin 0
+        font-weight bold
+        color #f0f0f0
+        opacity .4
+
+      &__title
+        font-size 4.5em
+        font-weight 600
+        margin 0
+        background-image linear-gradient(-45deg, $color-primary - 10%, $color-primary-alt)
+        text-gradient()
+
+      &__description
+        font-weight normal
+        font-size 1.5em
+        line-height 1.6
+        color #ccc
+
+.speakers
+  position relative
+  padding 14em 0
+  background-color #ececec
+
+  &-wrapper
+    wrapper()
+
+  &-title
+    text-align center
+
+    span
+      position relative
+      display inline-block
+      font-size 5em
+      color $color-text
+      margin 0
+      font-weight bold
+      z-index 2
+
+      &:before
+        content ''
+        width 100%
+        height 10px
+        border-bottom 10px solid $color-primary
+        transform rotate(-.7deg)
+        position absolute
+        bottom 0
+        left 0
+        z-index -1
+
+  &-list
+    list-reset()
+    margin-top 10em
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    align-items center
+
+    &-item
+      position relative
+      margin-bottom 4em
+      background-color #fff
+      width 48%
+      padding 1.6em
+      display flex
+      overflow hidden
+
+      &__status-off
+        opacity .3
+
+      &:before
+        content ''
+        width 100px
+        height 100px
+        background-color #ececec
+        transform rotate(45deg)
+        position absolute
+        bottom -70px
+        right -70px
+        border-left 1px solid #ddd
+
+      &-photo
+        flex-basis 35%
+
+      &-content
+        flex 1
+        padding-left 2em
+
+      &__avatar
+        max-width 100%
+
+      &__title
+        font-size 2.8em
+        font-weight bold
+        color $color-text
+        margin 0
+        letter-spacing -.03em
+
+      &__company
+        display block
+        margin-top .3em
+        font-size 1.6em
+        color #aaa
+        font-weight normal
+
+      &__social
+        margin 1.3em 0
+
+        &-link
+          display inline-block
+          width 25px
+          height @width
+          background-position center center
+          background-repeat no-repeat
+          background-size 100% auto
+          text-indent -9999em
+          margin-right 10px
+          transition opacity .3s ease
+
+          &:hover
+            opacity .7
+
+          &.github
+            background-image url($path-svg + 'icon-github.svg')
+
+          &.twitter
+            background-image url($path-svg + 'icon-twitter.svg')
+
+      &__talk
+        color $color-primary
+        font-weight 600
+        font-size 2.2em
+        margin 0
+        line-height 1.1
+
+.location
+  &-wrapper
+    display flex
+
+  &-column
+    &.content
+      flex-basis 45%
+      background $color-primary-alt
+      display flex
+      justify-content flex-end
+
+    &.photo
+      position relative
+      flex 1
+      bg('img', 'hotel.jpg')
+      background-size cover
+      overflow hidden
+
+      &:before
+        content ''
+        width 200px
+        height 1000px
+        background $color-primary-alt
+        transform rotate(7deg)
+        position absolute
+        top -100px
+        left -100px
+
+  &-content
+    padding-top 7em
+    padding-bottom 7em
+    width 80%
+
+    &-discount
+      margin-top 5em
+      padding-top 2em
+      border-top 1px solid rgba(#fff, .3)
+
+      .button
+        font-size 1.3em
+        background #fff
+        margin-left 1em
+        color $color-text
+        font-weight 600
+        transition box-shadow .6s ease
+
+        &:hover
+          box-shadow 0 0 50px 10px rgba($color-primary-alt - 20%, .6)
+
+      &__text
+        margin .3em 0 1em
+        font-size 1.4em
+        line-height 1.6
+        color #444
+
+        strong
+          font-weight 600
+
+          &.up
+            font-size 1.2em
+
+      &__code
+        display inline-block
+        margin 1em 0
+        font-size 1.5em
+        padding .5em 1em
+        color #444
+        border 1px dashed #fff
+        font-weight 600
+
+    &-address
+      position relative
+      padding-left 10em
+
+      &:before
+        content ''
+        width 70px
+        height 100px
+        position absolute
+        top -7px
+        left 0
+        bg('svg', 'icon-location.svg')
+        background-size 100% auto
+        background-position 0 0
+
+      .button
+        font-size 1.6em
+        background #fff
+        margin-top 1em
+        color $color-text
+        font-weight 600
+        transition box-shadow .6s ease
+
+        &:hover
+          box-shadow 0 0 50px 10px rgba($color-primary-alt - 20%, .6)
+
+  &-title
+    color $color-text
+    font-size 4.5em
+    font-weight bold
+    margin 0
+    letter-spacing -.05em
+
+  &-description
+    font-size 2em
+    font-weight 600
+    color $color-text
+    margin .6em 0
+    line-height 1.5
+
+.tickets
+  padding 10em 0
+  bg('img', 'audience.jpg')
+  background-size cover
+  min-height 600px
+
+  &-wrapper
+    wrapper()
+    text-align center
+
+  &-title
+    position relative
+    text-align center
+    padding-top 2.5em
+    color $color-primary-alt
+    font-size 5em
+    margin 0
+
+    &:before
+      content ''
+      width 70px
+      height 100px
+      position absolute
+      top 0
+      left 50%
+      margin-left -(@width / 2)
+      bg('svg', 'icon-ticket.svg')
+      background-size 100% auto
+      background-position 0 0
+
+  &-description
+    margin .5em 0
+    font-size 4em
+    color #fff
+    font-weight 600
+    text-align center
+
+  &-note
+    margin 0
+    font-size 1.4em
+    color #aaa
+    font-weight normal
+    text-align center
+
+    span
+      color #eee
+
+  .button
+    margin-top 3em
+    font-size 2em
+    font-weight 600
+
+.support
+  position relative
+  background #fff
+  padding 10em 0 25em
+
+  &:after
+    content ''
+    width 100%
+    height 350px
+    position absolute
+    bottom 0
+    left 0
+    bg('img', 'florianopolis-skyline.png')
+    background-position left bottom
+    z-index 1
+
+  &-wrapper
+    wrapper()
+
+  &-title
+    text-align center
+
+    span
+      position relative
+      display inline-block
+      font-size 4em
+      color $color-text
+      margin 0
+      font-weight bold
+      z-index 2
+
+      &:before
+        content ''
+        width 100%
+        height 10px
+        border-bottom 10px solid #eee
+        transform rotate(-.7deg)
+        position absolute
+        bottom 0
+        left 0
+        z-index -1
+
+  &-list
+    list-reset()
+    padding 5em 0 10em
+    display flex
+    justify-content center
+    align-items center
+    flex-wrap wrap
+    z-index 10
+    position relative
+
+    &.apoio
+      .support-item
+        margin 2em 1.4em
+      .support-link
+        img
+          max-width 100px
+
+  &-item
+    margin 2em 0
+
+  &-link
+    text-decoration none
+    border 0
+
+    img
+      max-width 300px
+
+.footer
+  padding 5em 0
+  background-color #ececec
+
+  &-wrapper
+    wrapper()
+    display flex
+
+  &-column
+    flex 1
+
+    &.email
+      text-align center
+
+    &.social
+      text-align right
+
+  &-email
+    color $color-text
+    font-size 1.4em
+    font-weight 600
+
+  &-link
+    color $color-text
+    font-size 1.4em
+    text-decoration none
+    border-bottom 1px solid #ddd
+    padding-bottom 2px
+    transition border .4s ease
+
+    &:hover
+      border-color $color-primary-alt
+
+  &-social
+    list-reset()
+
+    &-item
+      display inline-block
+      vertical-align top
+      margin 0 3px
+
+    &-link
+      display block
+      text-indent -9999em
+      width 25px
+      height @width
+      background-position 0 0
+      background-repeat no-repeat
+      background-size 100% auto
+      font-size 0
+      text-decoration none
+      border 0
+      transition opacity .4s ease
+
+      &:hover
+        opacity .7
+
+      &.twitter
+        background-image url($path-svg + 'icon-twitter-circle.svg')
+
+      &.facebook
+        background-image url($path-svg + 'icon-facebook-circle.svg')
+
+      &.github
+        background-image url($path-svg + 'icon-github-circle.svg')
+
+      img
+        max-width 50px
