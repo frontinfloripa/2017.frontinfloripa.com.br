@@ -245,6 +245,13 @@ body {
   color: #fff;
   background: #22d1a7;
 }
+.button-ghost {
+  background: transparent;
+  border: 1px solid #31ddb4;
+  font-weight: 600;
+  font-size: 1.3em;
+  color: #31ddb4;
+}
 .header {
   height: 100%;
   position: relative;
@@ -423,6 +430,11 @@ body {
   background: #fff;
   overflow: hidden;
 }
+@media only screen and (max-width: 580px) {
+  .features {
+    padding-top: 8em;
+  }
+}
 .features:before {
   content: '';
   width: 100px;
@@ -464,10 +476,20 @@ body {
   z-index: 20;
   position: relative;
 }
+@media only screen and (max-width: 580px) {
+  .features-wrapper {
+    display: block;
+  }
+}
 .features-column-title {
   -webkit-flex-basis: 30%;
   -ms-flex-basis: 30%;
   flex-basis: 30%;
+}
+@media only screen and (max-width: 580px) {
+  .features-column-title .button-ghost {
+    margin-bottom: 4em;
+  }
 }
 .features-column-content {
   -webkit-flex: 1;
@@ -479,6 +501,11 @@ body {
   font-weight: bold;
   font-size: 7em;
   margin: 0;
+}
+@media only screen and (max-width: 580px) {
+  .features-title {
+    font-size: 5em;
+  }
 }
 .features-description {
   color: #777;
@@ -499,6 +526,11 @@ body {
   position: relative;
   margin-bottom: 6em;
 }
+@media only screen and (max-width: 580px) {
+  .features-list-item {
+    padding-left: 0;
+  }
+}
 .features-list-item:before {
   counter-increment: section;
   content: counter(section);
@@ -513,6 +545,11 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
   filter: alpha(opacity=40);
   opacity: 0.4;
+}
+@media only screen and (max-width: 580px) {
+  .features-list-item:before {
+    display: none;
+  }
 }
 .features-list-item__title {
   font-size: 4.5em;
@@ -533,6 +570,12 @@ body {
   background-size: cover;
   text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
+}
+@media only screen and (max-width: 580px) {
+  .features-list-item__title {
+    font-size: 3.8em;
+    letter-spacing: -0.03em;
+  }
 }
 .features-list-item__description {
   font-weight: normal;
@@ -606,6 +649,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+}
+@media only screen and (max-width: 580px) {
+  .speakers-list-item {
+    width: 98%;
+  }
 }
 .speakers-list-item__status-off {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
@@ -692,6 +740,11 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+@media only screen and (max-width: 580px) {
+  .location-wrapper {
+    display: block;
+  }
+}
 .location-column.content {
   -webkit-flex-basis: 45%;
   -ms-flex-basis: 45%;
@@ -716,6 +769,11 @@ body {
   background-size: cover;
   overflow: hidden;
 }
+@media only screen and (max-width: 580px) {
+  .location-column.photo {
+    display: none;
+  }
+}
 .location-column.photo:before {
   content: '';
   width: 200px;
@@ -728,10 +786,27 @@ body {
   top: -100px;
   left: -100px;
 }
+@media only screen and (max-width: 1000px) {
+  .location-column.photo:before {
+    height: 1300px;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .location-column.photo:before {
+    display: none;
+  }
+}
 .location-content {
   padding-top: 7em;
   padding-bottom: 7em;
   width: 80%;
+}
+@media only screen and (max-width: 580px) {
+  .location-content {
+    width: 100%;
+    padding-right: 2em;
+    padding-left: 2em;
+  }
 }
 .location-content-discount {
   margin-top: 5em;
@@ -807,12 +882,22 @@ body {
   margin: 0;
   letter-spacing: -0.05em;
 }
+@media only screen and (max-width: 580px) {
+  .location-title {
+    font-size: 4em;
+  }
+}
 .location-description {
   font-size: 2em;
   font-weight: 600;
   color: #555;
   margin: 0.6em 0;
   line-height: 1.5;
+}
+@media only screen and (max-width: 580px) {
+  .location-description {
+    font-size: 1.6em;
+  }
 }
 .tickets {
   padding: 10em 0;
@@ -907,6 +992,11 @@ body {
   font-weight: bold;
   z-index: 2;
 }
+@media only screen and (max-width: 580px) {
+  .support-title span {
+    font-size: 3.6em;
+  }
+}
 .support-title span:before {
   content: '';
   width: 100%;
@@ -971,16 +1061,32 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+@media only screen and (max-width: 580px) {
+  .footer-wrapper {
+    display: block;
+  }
+}
 .footer-column {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  margin: 2em 0;
+}
+@media only screen and (max-width: 580px) {
+  .footer-column.coc {
+    text-align: center;
+  }
 }
 .footer-column.email {
   text-align: center;
 }
 .footer-column.social {
   text-align: right;
+}
+@media only screen and (max-width: 580px) {
+  .footer-column.social {
+    text-align: center;
+  }
 }
 .footer-email {
   color: #555;

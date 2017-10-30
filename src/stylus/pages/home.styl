@@ -141,6 +141,9 @@
   background #fff
   overflow hidden
 
+  +below('phone')
+    padding-top 8em
+
   &:before
     content ''
     width 100px
@@ -171,8 +174,15 @@
     z-index 20
     position relative
 
+    +below('phone')
+      display block
+
   &-column-title
     flex-basis 30%
+
+    .button-ghost
+      +below('phone')
+        margin-bottom 4em
 
   &-column-content
     flex 1
@@ -182,6 +192,9 @@
     font-weight bold
     font-size 7em
     margin 0
+
+    +below('phone')
+      font-size 5em
 
   &-description
     color #777
@@ -200,6 +213,9 @@
       position relative
       margin-bottom 6em
 
+      +below('phone')
+        padding-left 0
+
       &:before
         counter-increment section
         content counter(section)
@@ -213,12 +229,19 @@
         color #f0f0f0
         opacity .4
 
+        +below('phone')
+          display none
+
       &__title
         font-size 4.5em
         font-weight 600
         margin 0
         background-image linear-gradient(-45deg, $color-primary - 10%, $color-primary-alt)
         text-gradient()
+
+        +below('phone')
+          font-size 3.8em
+          letter-spacing -.03em
 
       &__description
         font-weight normal
@@ -273,6 +296,9 @@
       padding 1.6em
       display flex
       overflow hidden
+
+      +below('phone')
+        width 98%
 
       &__status-off
         opacity .3
@@ -346,6 +372,9 @@
   &-wrapper
     display flex
 
+    +below('phone')
+      display block
+
   &-column
     &.content
       flex-basis 45%
@@ -360,6 +389,9 @@
       background-size cover
       overflow hidden
 
+      +below('phone')
+        display none
+
       &:before
         content ''
         width 200px
@@ -370,10 +402,21 @@
         top -100px
         left -100px
 
+        +below('desktop-small')
+          height 1300px
+
+        +below('phone')
+          display none
+
   &-content
     padding-top 7em
     padding-bottom 7em
     width 80%
+
+    +below('phone')
+      width 100%
+      padding-right 2em
+      padding-left @padding-right
 
     &-discount
       margin-top 5em
@@ -445,12 +488,18 @@
     margin 0
     letter-spacing -.05em
 
+    +below('phone')
+      font-size 4em
+
   &-description
     font-size 2em
     font-weight 600
     color $color-text
     margin .6em 0
     line-height 1.5
+
+    +below('phone')
+      font-size 1.6em
 
 .tickets
   padding 10em 0
@@ -535,6 +584,9 @@
       font-weight bold
       z-index 2
 
+      +below('phone')
+        font-size 3.6em
+
       &:before
         content ''
         width 100%
@@ -581,14 +633,25 @@
     wrapper()
     display flex
 
+    +below('phone')
+      display block
+
   &-column
     flex 1
+    margin 2em 0
+
+    &.coc
+      +below('phone')
+        text-align center
 
     &.email
       text-align center
 
     &.social
       text-align right
+
+      +below('phone')
+        text-align center
 
   &-email
     color $color-text
