@@ -1,4 +1,12 @@
 -
+  name: "Fábio Vedovelli"
+  company: "octimine technologies"
+  avatar: "vedovelli.jpg"
+  twitter: "vedovelli"
+  github: "vedovelli"
+  talk: "Vue.js: \"pau pra toda obra\""
+  status: "on"
+-
   name: "Rodrigo Branas"
   company: "AgileCode / Gennera"
   avatar: "branas.jpg"
@@ -38,14 +46,6 @@
   github: "viniciuskneves"
   talk: "Como o Javascript funciona"
   status: "on"
--
-  name: "Em breve"
-  company: ""
-  avatar: "none.jpg"
-  twitter: ""
-  github: ""
-  talk: ""
-  status: "off"
 -
   name: "Em breve"
   company: ""

@@ -487,8 +487,13 @@ body {
   flex-basis: 30%;
 }
 @media only screen and (max-width: 580px) {
+  .features-column-title {
+    margin-bottom: 8em;
+  }
+}
+@media only screen and (max-width: 580px) {
   .features-column-title .button-ghost {
-    margin-bottom: 4em;
+    display: none;
   }
 }
 .features-column-content {
@@ -924,7 +929,7 @@ body {
 .tickets-title:before {
   content: '';
   width: 70px;
-  height: 100px;
+  height: 105px;
   position: absolute;
   top: 0;
   left: 50%;
@@ -948,9 +953,18 @@ body {
   color: #aaa;
   font-weight: normal;
   text-align: center;
+  line-height: 1.5;
 }
-.tickets-note span {
+.tickets-note a {
   color: #eee;
+  border-bottom: 1px solid #555;
+  text-decoration: none;
+  padding-bottom: 2px;
+  -webkit-transition: border 0.4s ease;
+  transition: border 0.4s ease;
+}
+.tickets-note a:hover {
+  border-color: #31ddb4;
 }
 .tickets .button {
   margin-top: 3em;
