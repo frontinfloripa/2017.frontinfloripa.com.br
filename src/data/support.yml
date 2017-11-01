@@ -15,6 +15,18 @@
   website: "https://www.umbler.com"
   logo: "umbler.png"
 -
+  name: "Alura"
+  website: "https://www.alura.com.br"
+  logo: "alura.png"
+-
+  name: "Caelum"
+  website: "https://www.caelum.com.br"
+  logo: "caelum.png"
+-
+  name: "Casa do Código"
+  website: "https://www.casadocodigo.com.br"
+  logo: "casa-do-codigo.png"
+-
   name: "Novatec"
   website: "http://novatec.com.br"
   logo: "novatec.png"

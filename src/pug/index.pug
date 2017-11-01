@@ -72,8 +72,10 @@ html
                 h3.speakers-list-item__title= speaker.name
                 span.speakers-list-item__company= speaker.company
                 .speakers-list-item__social
-                  a.speakers-list-item__social-link.github(href=`https://github.com/${speaker.github}` target='_blank') Github
-                  a.speakers-list-item__social-link.twitter(href=`https://twitter.com/${speaker.twitter}` target='_blank') Twitter
+                  if speaker.github
+                    a.speakers-list-item__social-link.github(href=`https://github.com/${speaker.github}` target='_blank') Github
+                  if speaker.twitter
+                    a.speakers-list-item__social-link.twitter(href=`https://twitter.com/${speaker.twitter}` target='_blank') Twitter
                 p.speakers-list-item__talk= speaker.talk
 
     section.location
