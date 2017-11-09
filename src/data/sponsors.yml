@@ -3,9 +3,13 @@
   website: "http://www.neoway.com.br"
   logo: "neoway.png"
 -
-  name: "Trezo"
-  website: "https://www.trezo.com.br"
-  logo: "trezo-alt.png"
+  name: "Arctouch"
+  website: "https://arctouch.com"
+  logo: "arctouch.png"
+-
+  name: "Conta Azul"
+  website: "https://contaazul.com"
+  logo: "contaazul.png"
 -
   name: "Avanti"
   website: "http://penseavanti.com.br"
@@ -15,9 +19,13 @@
   website: "http://www.geekhunter.com.br"
   logo: "geekhunter.png"
 -
-  name: "Conta Azul"
-  website: "https://contaazul.com"
-  logo: "contaazul.png"
+  name: "Trezo"
+  website: "https://www.trezo.com.br"
+  logo: "trezo-alt.png"
+-
+  name: "W16"
+  website: "http://w16.com.br"
+  logo: "w16.png"
 -
   name: "BrazilJS"
   website: "https://braziljs.org"
