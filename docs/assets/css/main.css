@@ -465,6 +465,11 @@ body {
   background-position: left bottom;
   z-index: 1;
 }
+@media only screen and (max-width: 580px) {
+  .features:after {
+    background-size: 300%;
+  }
+}
 .features-wrapper {
   max-width: 1040px;
   padding: 0 2em;
@@ -623,6 +628,12 @@ body {
   left: 0;
   z-index: -1;
 }
+.speakers-title__presenter {
+  margin-top: 10em;
+}
+.speakers-title__presenter span:before {
+  border-color: #f8f8f8;
+}
 .speakers-list {
   padding: 0;
   margin: 0;
@@ -642,6 +653,12 @@ body {
   -webkit-align-items: center;
   -ms-align-items: center;
   align-items: center;
+}
+.speakers-list__presenter {
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  margin-top: 9em;
 }
 .speakers-list-item {
   position: relative;
@@ -677,6 +694,38 @@ body {
   bottom: -70px;
   right: -70px;
   border-left: 1px solid #ddd;
+}
+.speakers-list-item__presenter {
+  background: #3decc2;
+}
+.speakers-list-item__presenter .speakers-list-item-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.speakers-list-item__presenter .speakers-list-item__title {
+  font-size: 4em;
+}
+@media only screen and (max-width: 580px) {
+  .speakers-list-item__presenter .speakers-list-item__title {
+    font-size: 3em;
+  }
+}
+.speakers-list-item__presenter .speakers-list-item__company {
+  color: #fff;
+  margin-top: 0;
+  font-size: 2em;
+}
+.speakers-list-item__presenter:before {
+  border-color: #15d8aa;
 }
 .speakers-list-item-photo {
   -webkit-flex-basis: 35%;
@@ -989,6 +1038,11 @@ body {
   background-position: left bottom;
   z-index: 1;
 }
+@media only screen and (max-width: 580px) {
+  .support:after {
+    background-size: 300%;
+  }
+}
 .support-wrapper {
   max-width: 1040px;
   padding: 0 2em;
@@ -1128,6 +1182,11 @@ body {
   display: inline-block;
   vertical-align: top;
   margin: 0 3px;
+}
+@media only screen and (max-width: 580px) {
+  .footer-social-item {
+    margin: 0 0.7em;
+  }
 }
 .footer-social-link {
   display: block;

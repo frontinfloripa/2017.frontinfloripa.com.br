@@ -33,8 +33,6 @@ html
           h1.header-logo #{config.event.name}
           h2.header-info 02/Dezembro #[span &bull;] 9h #[span &bull;] #[a(href='https://goo.gl/maps/ty539BmfZM82' target='_blank') Hotel Maria do Mar]
           a.button(href=`${config.tickets.url}` target='_blank') Comprar Ingresso
-          div.header-support
-            a.header-support__link(href='https://goo.gl/QqtsRp' target='_blank') Quero patrocinar
       video.header-video(loop autoplay)
         source(src='assets/video/frontinfloripa2017.webm' type='video/webm')
         source(src='assets/video/frontinfloripa2017.mp4' type='video/mp4')
@@ -75,6 +73,15 @@ html
                   if speaker.twitter
                     a.speakers-list-item__social-link.twitter(href=`https://twitter.com/${speaker.twitter}` target='_blank') Twitter
                 p.speakers-list-item__talk= speaker.talk
+        .speakers-title.speakers-title__presenter
+          span Apresentação
+        ul.speakers-list.speakers-list__presenter
+          li.speakers-list-item.speakers-list-item__presenter
+            .speakers-list-item-photo
+              img.speakers-list-item__avatar(src=`assets/img/speakers/bernard.jpg`)
+            .speakers-list-item-content
+              h3.speakers-list-item__title Bernard de Luna
+              span.speakers-list-item__company bunee.io
 
     section.location
       .location-wrapper
