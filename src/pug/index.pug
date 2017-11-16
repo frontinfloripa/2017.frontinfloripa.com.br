@@ -58,7 +58,7 @@ html
     section.speakers
       .speakers-wrapper
         .speakers-title
-          span Palestrantes & Talks
+          span Palestrantes &amp; Talks
         ul.speakers-list
           each speaker in speakers
             li(class=`speakers-list-item speakers-list-item__status-${speaker.status}`)
@@ -97,6 +97,19 @@ html
               a.button(href='http://mariadomar.com.br' target='_blank') Reservar
 
         .location-column.photo
+
+    section.schedule
+      .speakers-title
+        span Programação
+      ul.schedule-list
+        each event in schedule
+          li(class=`schedule-list-item schedule-list-item--${event.type}`)
+            .schedule-list-item-time
+              span.schedule-list-item__time= event.time
+            .schedule-list-item-content
+              h3.schedule-list-item__title= event.title
+              p.schedule-list-item__talk= event.talk
+      p.schedule-note Os horários e slots poderão sofrer alterações até o dia do evento.
 
     section.tickets
       .tickets-wrapper

@@ -540,6 +540,107 @@
     +below('phone')
       font-size 1.6em
 
+.schedule
+  padding 10em 0 12em
+  background #fff
+  col-padding = 4em
+
+  &-note
+    text-align center
+    color #ccc
+    padding 0 2em
+    font-size 1.3em
+    line-height 1.8
+
+  &-list
+    list-reset()
+    max-width 800px
+    margin 0 auto
+    padding 8em 0 4em
+
+    +below('phone')
+      padding-right 3em
+
+    &-item
+      display flex
+      padding 3em 0 2em
+
+      &-time
+        position relative
+        flex-basis 30%
+        padding-right col-padding
+        display flex
+        align-items center
+        justify-content flex-end
+
+        +below('phone')
+          padding-right 3em
+
+        &:after
+          content ''
+          position absolute
+          top 5px
+          right 0
+          width 0
+          height 30px
+          transform rotate(10deg)
+          border-right 1px solid $color-primary-alt
+
+          +below('phone')
+            height 20px
+            top 3px
+
+      &-content
+        flex 1
+        padding-left col-padding
+
+        +below('phone')
+          padding-left 3em
+
+      &__time
+        font-size 3em
+        font-weight bold
+        color #ddd
+        letter-spacing -.06em
+
+        +below('phone')
+          font-size 2.2em
+
+      &__title
+        font-size 3.5em
+        margin 0
+        padding 0
+        background-image linear-gradient(-45deg, $color-text, $color-text + 30%)
+        text-gradient()
+        letter-spacing -.03em
+
+        +below('phone')
+          font-size 2.2em
+
+      &__talk
+        margin .3em 0 0 0
+        padding 0
+        font-size 1.6em
+        font-weight normal
+        color $color-text
+        line-height 1.4
+
+        +below('phone')
+          font-size 1.4em
+
+      &--talk
+        padding 2em 0
+
+        .schedule-list-item-time
+          &:after
+            display none
+
+        .schedule-list-item__time
+          display none
+
+        .schedule-list-item__title
+          background-image linear-gradient(-45deg, $color-primary - 10%, $color-primary-alt)
+
 .tickets
   padding 10em 0
   bg('img', 'audience.jpg')

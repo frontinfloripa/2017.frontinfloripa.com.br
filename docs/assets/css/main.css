@@ -953,6 +953,159 @@ body {
     font-size: 1.6em;
   }
 }
+.schedule {
+  padding: 10em 0 12em;
+  background: #fff;
+}
+.schedule-note {
+  text-align: center;
+  color: #ccc;
+  padding: 0 2em;
+  font-size: 1.3em;
+  line-height: 1.8;
+}
+.schedule-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 8em 0 4em;
+}
+@media only screen and (max-width: 580px) {
+  .schedule-list {
+    padding-right: 3em;
+  }
+}
+.schedule-list-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3em 0 2em;
+}
+.schedule-list-item-time {
+  position: relative;
+  -webkit-flex-basis: 30%;
+  -ms-flex-basis: 30%;
+  flex-basis: 30%;
+  padding-right: 4em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+}
+@media only screen and (max-width: 580px) {
+  .schedule-list-item-time {
+    padding-right: 3em;
+  }
+}
+.schedule-list-item-time:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 0;
+  height: 30px;
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+  border-right: 1px solid #3decc2;
+}
+@media only screen and (max-width: 580px) {
+  .schedule-list-item-time:after {
+    height: 20px;
+    top: 3px;
+  }
+}
+.schedule-list-item-content {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-left: 4em;
+}
+@media only screen and (max-width: 580px) {
+  .schedule-list-item-content {
+    padding-left: 3em;
+  }
+}
+.schedule-list-item__time {
+  font-size: 3em;
+  font-weight: bold;
+  color: #ddd;
+  letter-spacing: -0.06em;
+}
+@media only screen and (max-width: 580px) {
+  .schedule-list-item__time {
+    font-size: 2.2em;
+  }
+}
+.schedule-list-item__title {
+  font-size: 3.5em;
+  margin: 0;
+  padding: 0;
+  background-image: -webkit-linear-gradient(135deg,#555,#888);
+  background-image: -moz-linear-gradient(135deg,#555,#888);
+  background-image: -ms-linear-gradient(135deg,#555,#888);
+  background-image: -o-linear-gradient(135deg,#555,#888);
+  background-image: -webkit-linear-gradient(135deg,#555,#888);
+  background-image: -moz-linear-gradient(135deg,#555,#888);
+  background-image: -ms-linear-gradient(135deg,#555,#888);
+  background-image: -o-linear-gradient(135deg,#555,#888);
+  background-image: linear-gradient(-45deg,#555,#888);
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: cover;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.03em;
+}
+@media only screen and (max-width: 580px) {
+  .schedule-list-item__title {
+    font-size: 2.2em;
+  }
+}
+.schedule-list-item__talk {
+  margin: 0.3em 0 0 0;
+  padding: 0;
+  font-size: 1.6em;
+  font-weight: normal;
+  color: #555;
+  line-height: 1.4;
+}
+@media only screen and (max-width: 580px) {
+  .schedule-list-item__talk {
+    font-size: 1.4em;
+  }
+}
+.schedule-list-item--talk {
+  padding: 2em 0;
+}
+.schedule-list-item--talk .schedule-list-item-time:after {
+  display: none;
+}
+.schedule-list-item--talk .schedule-list-item__time {
+  display: none;
+}
+.schedule-list-item--talk .schedule-list-item__title {
+  background-image: -webkit-linear-gradient(135deg,#22d1a7,#3decc2);
+  background-image: -moz-linear-gradient(135deg,#22d1a7,#3decc2);
+  background-image: -ms-linear-gradient(135deg,#22d1a7,#3decc2);
+  background-image: -o-linear-gradient(135deg,#22d1a7,#3decc2);
+  background-image: -webkit-linear-gradient(135deg,#22d1a7,#3decc2);
+  background-image: -moz-linear-gradient(135deg,#22d1a7,#3decc2);
+  background-image: -ms-linear-gradient(135deg,#22d1a7,#3decc2);
+  background-image: -o-linear-gradient(135deg,#22d1a7,#3decc2);
+  background-image: linear-gradient(-45deg,#22d1a7,#3decc2);
+}
 .tickets {
   padding: 10em 0;
   background-image: url("../img/audience.jpg");
