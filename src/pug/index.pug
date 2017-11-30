@@ -32,7 +32,7 @@ html
         .header-content
           h1.header-logo #{config.event.name}
           h2.header-info 02/Dezembro #[span &bull;] 9h #[span &bull;] #[a(href='https://goo.gl/maps/ty539BmfZM82' target='_blank') Hotel Maria do Mar]
-          a.button(href=`${config.tickets.url}` target='_blank') Comprar Ingresso
+          a.button.button-off(href=`${config.tickets.url}` target='_blank') Ingressos esgotados
       video.header-video(loop autoplay)
         source(src='assets/video/frontinfloripa2017.webm' type='video/webm')
         source(src='assets/video/frontinfloripa2017.mp4' type='video/mp4')
@@ -114,9 +114,7 @@ html
     section.tickets
       .tickets-wrapper
         h2.tickets-title Ingresso
-        p.tickets-description 1º Lote – R$ 80
-        p.tickets-note Para grupos e excursões, envie um e-mail para #[a(href='mailto:contato@frontinfloripa.com.br') contato@frontinfloripa.com.br]
-        a.button(href=`${config.tickets.url}` target='_blank') Comprar Ingresso
+        a.button.button-off(href=`${config.tickets.url}` target='_blank') Ingressos esgotados
 
     section.support
       .support-wrapper

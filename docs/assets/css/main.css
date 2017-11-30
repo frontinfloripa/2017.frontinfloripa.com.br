@@ -252,6 +252,11 @@ body {
   font-size: 1.3em;
   color: #31ddb4;
 }
+.button-off {
+  background: #bbb;
+  pointer-events: none;
+  cursor: default;
+}
 .header {
   height: 100%;
   position: relative;
